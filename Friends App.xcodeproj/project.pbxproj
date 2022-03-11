@@ -1,0 +1,710 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC038D1927DAACB1005CC9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC038D1827DAACB1005CC9FC /* AppDelegate.swift */; };
+		FC038D1B27DAACB1005CC9FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC038D1A27DAACB1005CC9FC /* SceneDelegate.swift */; };
+		FC038D2027DAACB1005CC9FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC038D1E27DAACB1005CC9FC /* Main.storyboard */; };
+		FC038D2327DAACB1005CC9FC /* Friends_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC038D2127DAACB1005CC9FC /* Friends_App.xcdatamodeld */; };
+		FC038D2527DAACB2005CC9FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC038D2427DAACB2005CC9FC /* Assets.xcassets */; };
+		FC038D2827DAACB2005CC9FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC038D2627DAACB2005CC9FC /* LaunchScreen.storyboard */; };
+		FC038D3327DAACB3005CC9FC /* Friends_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC038D3227DAACB3005CC9FC /* Friends_AppTests.swift */; };
+		FC038D3D27DAACB3005CC9FC /* Friends_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC038D3C27DAACB3005CC9FC /* Friends_AppUITests.swift */; };
+		FC038D3F27DAACB3005CC9FC /* Friends_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC038D3E27DAACB3005CC9FC /* Friends_AppUITestsLaunchTests.swift */; };
+		FC17BA2327DAAE6A00D83477 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17BA2227DAAE6A00D83477 /* Friend.swift */; };
+		FC17BA2627DAAF5000D83477 /* LocalDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17BA2527DAAF5000D83477 /* LocalDatabaseManager.swift */; };
+		FC17BA2827DABFB300D83477 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17BA2727DABFB300D83477 /* FriendsTableViewController.swift */; };
+		FC17BA2A27DABFE400D83477 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17BA2927DABFE400D83477 /* FriendTableViewCell.swift */; };
+		FC17BA2C27DAC85B00D83477 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17BA2B27DAC85B00D83477 /* AddFriendViewController.swift */; };
+		FC17BA2E27DACA9700D83477 /* addNewFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17BA2D27DACA9700D83477 /* addNewFriend.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC038D2F27DAACB3005CC9FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC038D0D27DAACB1005CC9FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC038D1427DAACB1005CC9FC;
+			remoteInfo = "Friends App";
+		};
+		FC038D3927DAACB3005CC9FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC038D0D27DAACB1005CC9FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC038D1427DAACB1005CC9FC;
+			remoteInfo = "Friends App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC038D1527DAACB1005CC9FC /* Friends App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Friends App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC038D1827DAACB1005CC9FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC038D1A27DAACB1005CC9FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FC038D1F27DAACB1005CC9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC038D2227DAACB1005CC9FC /* Friends_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Friends_App.xcdatamodel; sourceTree = "<group>"; };
+		FC038D2427DAACB2005CC9FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC038D2727DAACB2005CC9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC038D2927DAACB2005CC9FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC038D2E27DAACB3005CC9FC /* Friends AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Friends AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC038D3227DAACB3005CC9FC /* Friends_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends_AppTests.swift; sourceTree = "<group>"; };
+		FC038D3827DAACB3005CC9FC /* Friends AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Friends AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC038D3C27DAACB3005CC9FC /* Friends_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends_AppUITests.swift; sourceTree = "<group>"; };
+		FC038D3E27DAACB3005CC9FC /* Friends_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FC17BA2227DAAE6A00D83477 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		FC17BA2527DAAF5000D83477 /* LocalDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDatabaseManager.swift; sourceTree = "<group>"; };
+		FC17BA2727DABFB300D83477 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		FC17BA2927DABFE400D83477 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		FC17BA2B27DAC85B00D83477 /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
+		FC17BA2D27DACA9700D83477 /* addNewFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNewFriend.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC038D1227DAACB1005CC9FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC038D2B27DAACB3005CC9FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC038D3527DAACB3005CC9FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC038D0C27DAACB1005CC9FC = {
+			isa = PBXGroup;
+			children = (
+				FC038D1727DAACB1005CC9FC /* Friends App */,
+				FC038D3127DAACB3005CC9FC /* Friends AppTests */,
+				FC038D3B27DAACB3005CC9FC /* Friends AppUITests */,
+				FC038D1627DAACB1005CC9FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC038D1627DAACB1005CC9FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC038D1527DAACB1005CC9FC /* Friends App.app */,
+				FC038D2E27DAACB3005CC9FC /* Friends AppTests.xctest */,
+				FC038D3827DAACB3005CC9FC /* Friends AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC038D1727DAACB1005CC9FC /* Friends App */ = {
+			isa = PBXGroup;
+			children = (
+				FC038D4E27DAACD7005CC9FC /* Protocols */,
+				FC038D4D27DAACD3005CC9FC /* Model */,
+				FC038D4C27DAACCF005CC9FC /* View Controller */,
+				FC038D4B27DAACC7005CC9FC /* View */,
+				FC038D1827DAACB1005CC9FC /* AppDelegate.swift */,
+				FC038D1A27DAACB1005CC9FC /* SceneDelegate.swift */,
+				FC038D2427DAACB2005CC9FC /* Assets.xcassets */,
+				FC038D2627DAACB2005CC9FC /* LaunchScreen.storyboard */,
+				FC038D2927DAACB2005CC9FC /* Info.plist */,
+				FC038D2127DAACB1005CC9FC /* Friends_App.xcdatamodeld */,
+			);
+			path = "Friends App";
+			sourceTree = "<group>";
+		};
+		FC038D3127DAACB3005CC9FC /* Friends AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC038D3227DAACB3005CC9FC /* Friends_AppTests.swift */,
+			);
+			path = "Friends AppTests";
+			sourceTree = "<group>";
+		};
+		FC038D3B27DAACB3005CC9FC /* Friends AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC038D3C27DAACB3005CC9FC /* Friends_AppUITests.swift */,
+				FC038D3E27DAACB3005CC9FC /* Friends_AppUITestsLaunchTests.swift */,
+			);
+			path = "Friends AppUITests";
+			sourceTree = "<group>";
+		};
+		FC038D4B27DAACC7005CC9FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC038D1E27DAACB1005CC9FC /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC038D4C27DAACCF005CC9FC /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC17BA2727DABFB300D83477 /* FriendsTableViewController.swift */,
+				FC17BA2927DABFE400D83477 /* FriendTableViewCell.swift */,
+				FC17BA2B27DAC85B00D83477 /* AddFriendViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		FC038D4D27DAACD3005CC9FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC17BA1E27DAADC300D83477 /* Pojo */,
+				FC17BA1F27DAADCD00D83477 /* DatabaseManager */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC038D4E27DAACD7005CC9FC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FC17BA2D27DACA9700D83477 /* addNewFriend.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FC17BA1E27DAADC300D83477 /* Pojo */ = {
+			isa = PBXGroup;
+			children = (
+				FC17BA2227DAAE6A00D83477 /* Friend.swift */,
+			);
+			path = Pojo;
+			sourceTree = "<group>";
+		};
+		FC17BA1F27DAADCD00D83477 /* DatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				FC17BA2027DAAE0100D83477 /* LocalDatabase */,
+				FC17BA2127DAAE1800D83477 /* RemoteDatabase */,
+			);
+			path = DatabaseManager;
+			sourceTree = "<group>";
+		};
+		FC17BA2027DAAE0100D83477 /* LocalDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				FC17BA2527DAAF5000D83477 /* LocalDatabaseManager.swift */,
+			);
+			path = LocalDatabase;
+			sourceTree = "<group>";
+		};
+		FC17BA2127DAAE1800D83477 /* RemoteDatabase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RemoteDatabase;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC038D1427DAACB1005CC9FC /* Friends App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC038D4227DAACB3005CC9FC /* Build configuration list for PBXNativeTarget "Friends App" */;
+			buildPhases = (
+				FC038D1127DAACB1005CC9FC /* Sources */,
+				FC038D1227DAACB1005CC9FC /* Frameworks */,
+				FC038D1327DAACB1005CC9FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Friends App";
+			productName = "Friends App";
+			productReference = FC038D1527DAACB1005CC9FC /* Friends App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC038D2D27DAACB3005CC9FC /* Friends AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC038D4527DAACB3005CC9FC /* Build configuration list for PBXNativeTarget "Friends AppTests" */;
+			buildPhases = (
+				FC038D2A27DAACB3005CC9FC /* Sources */,
+				FC038D2B27DAACB3005CC9FC /* Frameworks */,
+				FC038D2C27DAACB3005CC9FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC038D3027DAACB3005CC9FC /* PBXTargetDependency */,
+			);
+			name = "Friends AppTests";
+			productName = "Friends AppTests";
+			productReference = FC038D2E27DAACB3005CC9FC /* Friends AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC038D3727DAACB3005CC9FC /* Friends AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC038D4827DAACB3005CC9FC /* Build configuration list for PBXNativeTarget "Friends AppUITests" */;
+			buildPhases = (
+				FC038D3427DAACB3005CC9FC /* Sources */,
+				FC038D3527DAACB3005CC9FC /* Frameworks */,
+				FC038D3627DAACB3005CC9FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC038D3A27DAACB3005CC9FC /* PBXTargetDependency */,
+			);
+			name = "Friends AppUITests";
+			productName = "Friends AppUITests";
+			productReference = FC038D3827DAACB3005CC9FC /* Friends AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC038D0D27DAACB1005CC9FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					FC038D1427DAACB1005CC9FC = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					FC038D2D27DAACB3005CC9FC = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = FC038D1427DAACB1005CC9FC;
+					};
+					FC038D3727DAACB3005CC9FC = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = FC038D1427DAACB1005CC9FC;
+					};
+				};
+			};
+			buildConfigurationList = FC038D1027DAACB1005CC9FC /* Build configuration list for PBXProject "Friends App" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC038D0C27DAACB1005CC9FC;
+			productRefGroup = FC038D1627DAACB1005CC9FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC038D1427DAACB1005CC9FC /* Friends App */,
+				FC038D2D27DAACB3005CC9FC /* Friends AppTests */,
+				FC038D3727DAACB3005CC9FC /* Friends AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC038D1327DAACB1005CC9FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC038D2827DAACB2005CC9FC /* LaunchScreen.storyboard in Resources */,
+				FC038D2527DAACB2005CC9FC /* Assets.xcassets in Resources */,
+				FC038D2027DAACB1005CC9FC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC038D2C27DAACB3005CC9FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC038D3627DAACB3005CC9FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC038D1127DAACB1005CC9FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC17BA2C27DAC85B00D83477 /* AddFriendViewController.swift in Sources */,
+				FC17BA2627DAAF5000D83477 /* LocalDatabaseManager.swift in Sources */,
+				FC17BA2E27DACA9700D83477 /* addNewFriend.swift in Sources */,
+				FC038D1927DAACB1005CC9FC /* AppDelegate.swift in Sources */,
+				FC17BA2327DAAE6A00D83477 /* Friend.swift in Sources */,
+				FC038D1B27DAACB1005CC9FC /* SceneDelegate.swift in Sources */,
+				FC17BA2827DABFB300D83477 /* FriendsTableViewController.swift in Sources */,
+				FC038D2327DAACB1005CC9FC /* Friends_App.xcdatamodeld in Sources */,
+				FC17BA2A27DABFE400D83477 /* FriendTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC038D2A27DAACB3005CC9FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC038D3327DAACB3005CC9FC /* Friends_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC038D3427DAACB3005CC9FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC038D3F27DAACB3005CC9FC /* Friends_AppUITestsLaunchTests.swift in Sources */,
+				FC038D3D27DAACB3005CC9FC /* Friends_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC038D3027DAACB3005CC9FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC038D1427DAACB1005CC9FC /* Friends App */;
+			targetProxy = FC038D2F27DAACB3005CC9FC /* PBXContainerItemProxy */;
+		};
+		FC038D3A27DAACB3005CC9FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC038D1427DAACB1005CC9FC /* Friends App */;
+			targetProxy = FC038D3927DAACB3005CC9FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC038D1E27DAACB1005CC9FC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC038D1F27DAACB1005CC9FC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC038D2627DAACB2005CC9FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC038D2727DAACB2005CC9FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC038D4027DAACB3005CC9FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC038D4127DAACB3005CC9FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC038D4327DAACB3005CC9FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YHNN4VPXK7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Friends App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ahmedtahaelnaghy.Friends-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC038D4427DAACB3005CC9FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YHNN4VPXK7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Friends App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ahmedtahaelnaghy.Friends-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FC038D4627DAACB3005CC9FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YHNN4VPXK7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ahmedtahaelnaghy.Friends-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Friends App.app/Friends App";
+			};
+			name = Debug;
+		};
+		FC038D4727DAACB3005CC9FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YHNN4VPXK7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ahmedtahaelnaghy.Friends-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Friends App.app/Friends App";
+			};
+			name = Release;
+		};
+		FC038D4927DAACB3005CC9FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YHNN4VPXK7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ahmedtahaelnaghy.Friends-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Friends App";
+			};
+			name = Debug;
+		};
+		FC038D4A27DAACB3005CC9FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YHNN4VPXK7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ahmedtahaelnaghy.Friends-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Friends App";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC038D1027DAACB1005CC9FC /* Build configuration list for PBXProject "Friends App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC038D4027DAACB3005CC9FC /* Debug */,
+				FC038D4127DAACB3005CC9FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC038D4227DAACB3005CC9FC /* Build configuration list for PBXNativeTarget "Friends App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC038D4327DAACB3005CC9FC /* Debug */,
+				FC038D4427DAACB3005CC9FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC038D4527DAACB3005CC9FC /* Build configuration list for PBXNativeTarget "Friends AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC038D4627DAACB3005CC9FC /* Debug */,
+				FC038D4727DAACB3005CC9FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC038D4827DAACB3005CC9FC /* Build configuration list for PBXNativeTarget "Friends AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC038D4927DAACB3005CC9FC /* Debug */,
+				FC038D4A27DAACB3005CC9FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FC038D2127DAACB1005CC9FC /* Friends_App.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FC038D2227DAACB1005CC9FC /* Friends_App.xcdatamodel */,
+			);
+			currentVersion = FC038D2227DAACB1005CC9FC /* Friends_App.xcdatamodel */;
+			path = Friends_App.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FC038D0D27DAACB1005CC9FC /* Project object */;
+}
