@@ -46,6 +46,8 @@ class FriendsTableViewController: UITableViewController, addNewFriend {
         cell.friendImage.image = UIImage(data: friendArray[indexPath.row].image)
         cell.friendName.text = friendArray[indexPath.row].name
         
+        cell.showsReorderControl = true
+        
         return cell
     }
     
@@ -55,7 +57,7 @@ class FriendsTableViewController: UITableViewController, addNewFriend {
         return 150
         
     }
-    
+
     
     func addFriend(friend: Friend) {
         
@@ -64,20 +66,6 @@ class FriendsTableViewController: UITableViewController, addNewFriend {
         tableView.reloadData()
         
     }
-     
-    
-     @IBAction func addNewFriendBtn(_ sender: Any) {
-         
-         if let vc = storyboard?.instantiateViewController(withIdentifier: "AddVC") as? AddFriendViewController {
-             
-             vc.delegate = self
-             
-             
-             navigationController?.pushViewController(vc, animated: true)
-             
-         } 
-         
-     }
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -111,5 +99,46 @@ class FriendsTableViewController: UITableViewController, addNewFriend {
         }
     }
     
-
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+        let cellToMove = friendArray[sourceIndexPath.row]
+        
+        friendArray.remove(at: sourceIndexPath.row)
+        
+        friendArray.insert(cellToMove, at: destinationIndexPath.row)
+        
+        localDatabase.saveToDatabase(friendsArray: friendArray)
+        
+//        UserDefaults.standard.synchronize()
+        
+    }
+    
+    
+    @IBAction func addNewFriendBtn(_ sender: Any) {
+        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "AddVC") as? AddFriendViewController {
+            
+            vc.delegate = self
+            
+            navigationController?.pushViewController(vc, animated: true)
+            
+        }
+        
+    }
+    
+    
+    @IBAction func editBtn(_ sender: Any) {
+        
+        self.isEditing = true
+        
+    }
+    
+    
+    @IBAction func saveBtn(_ sender: Any) {
+        
+        self.isEditing = false
+        
+    }
+    
 }

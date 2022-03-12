@@ -37,7 +37,6 @@ class AddFriendViewController: UIViewController, UIImagePickerControllerDelegate
         
         present(imagePicker, animated: true, completion: nil)
         
-        
     }
     
     
