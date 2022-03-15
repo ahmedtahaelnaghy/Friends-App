@@ -8,9 +8,11 @@
 import UIKit
 
 class FriendsTableViewController: UITableViewController, addNewFriend {
+   
+    @IBOutlet weak var editSaveButton: UIBarButtonItem!
     
+    var isSavedButton = false
     var localDatabase: LocalDatabaseManager!
-    
     var friendArray: [Friend] = []
     
     override func viewDidLoad() {
@@ -108,8 +110,6 @@ class FriendsTableViewController: UITableViewController, addNewFriend {
         
         friendArray.insert(cellToMove, at: destinationIndexPath.row)
         
-        localDatabase.saveToDatabase(friendsArray: friendArray)
-        
 //        UserDefaults.standard.synchronize()
         
     }
@@ -127,17 +127,28 @@ class FriendsTableViewController: UITableViewController, addNewFriend {
         
     }
     
-    
-    @IBAction func editBtn(_ sender: Any) {
+    func toggleEditingButton(){
+       
+        if isSavedButton == false {
+            
+            self.isEditing = true
+            editSaveButton.title = "Save"
+            
+        }else {
+            
+            localDatabase.saveToDatabase(friendsArray: friendArray)
+            self.isEditing = false
+            editSaveButton.title = "Edit"
+            
+        }
         
-        self.isEditing = true
-        
+        isSavedButton.toggle()
     }
     
     
-    @IBAction func saveBtn(_ sender: Any) {
+    @IBAction func editBtn(_ sender: Any) {
         
-        self.isEditing = false
+        toggleEditingButton()
         
     }
     

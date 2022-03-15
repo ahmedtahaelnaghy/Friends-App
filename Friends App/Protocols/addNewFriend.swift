@@ -12,7 +12,6 @@ protocol addNewFriend {
     
     func addFriend(friend: Friend)
     
-    
 }
 
 
