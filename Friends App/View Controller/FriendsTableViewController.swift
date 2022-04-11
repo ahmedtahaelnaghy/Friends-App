@@ -82,6 +82,17 @@ class FriendsTableViewController: UITableViewController, addNewFriend {
         
     }
      
+    @IBAction func addNewFriendBtn(_ sender: Any) {
+        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "AddVC") as? AddFriendViewController {
+            
+            vc.delegate = self
+            
+            navigationController?.pushViewController(vc, animated: true)
+            
+        }
+        
+    }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
@@ -111,19 +122,6 @@ class FriendsTableViewController: UITableViewController, addNewFriend {
         friendArray.insert(cellToMove, at: destinationIndexPath.row)
         
 //        UserDefaults.standard.synchronize()
-        
-    }
-    
-    
-    @IBAction func addNewFriendBtn(_ sender: Any) {
-        
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "AddVC") as? AddFriendViewController {
-            
-            vc.delegate = self
-            
-            navigationController?.pushViewController(vc, animated: true)
-            
-        }
         
     }
     
